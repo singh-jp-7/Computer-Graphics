@@ -5,7 +5,7 @@ int main()
 {
     int gd = DETECT, gm;
     initgraph(&gd,&gm,NULL);
-    outtextxy(200,200,"We Are Venom");
+    outtextxy(100,150,"We Are   indians");
     delay(5000);
     closegraph();
     return 0;
