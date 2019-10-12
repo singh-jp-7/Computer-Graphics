@@ -2,37 +2,39 @@
 #include<graphics.h>
 #include<cmath>
 using namespace std;
-
-void DDA(int X0,int Y0, int X1, int Y1)
-{
-	int dx = X1-X0; 
-    	int dy = Y1-Y0; 
-	//To count no of steps.
-	int steps = abs(dx) > abs(dy) ? abs(dx) : abs(dy);
-	float Xinc = dx / (float) steps; 
-    	float Yinc = dy / (float) steps; 
-	float X = X0; 
-    	float Y = Y0; 
-	//Loop to display all the points between the end points.
-    	for (int i = 0; i <= steps; i++) 
-    	{ 
-        	putpixel (X,Y,100);  
-        	X += Xinc; 
-        	Y += Yinc;           
-        	delay(5);
-              
-}
-} 
 int main()
 {
-int X0,Y0,X1,Y1;
+int x0,y0,x1,y1;
 //Input the co ordinates from the user.
 cout<<"Enter the four coordinates: "<<endl;
 cin>>X0>>Y0>>X1>>Y1;
-int gd = DETECT, gm;
+int gd = DETECT, gm,i;
 initgraph(&gd,&gm, NULL);
-DDA(X0,Y0,X1,Y1);
+float dx,dy,x,y,step;
+	dx=(float)x1-x0;
+	dy=(float)y1-y0;
+	if(dx>dy))
+	{
+		step=dx;
+	}
+	else
+	{
+		step=dy;
+	}
+	dx=dx/step;
+	dy=dy/step;
+	x=x0;
+	y=y0;
+	i=1;
+	while(i<=step)
+	{
+		putpixel(x,y,120);
+		x+=dx;
+		y+=dy;
+		i++;
+	}
 delay(50000);
 closegraph();
 return 0;
 }
+
