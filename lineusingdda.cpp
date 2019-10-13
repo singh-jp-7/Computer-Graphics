@@ -13,7 +13,9 @@ void DDA(int X0,int Y0, int X1, int Y1)
     	float Yinc = dy / (float) steps; 
 	float X = X0; 
     	float Y = Y0; 
+	
 	//Loop to display all the points between the end points.
+	
     	for (int i = 0; i <= steps; i++) 
     	{ 
         	putpixel (X,Y,100);  
@@ -23,16 +25,22 @@ void DDA(int X0,int Y0, int X1, int Y1)
               
 }
 } 
+
 int main()
+	
 {
+	
 int X0,Y0,X1,Y1;
+	
 //Input the co ordinates from the user.
-cout<<"Enter the four coordinates: "<<endl;
+	
+cout<<"Enter the four coordinates for the starting and the end points: "<<endl;
 cin>>X0>>Y0>>X1>>Y1;
-int gd = DETECT, gm;
-initgraph(&gd,&gm, NULL);
+int gdriver = DETECT, gmode;
+initgraph(&gdriver,&gmode, NULL);
 DDA(X0,Y0,X1,Y1);
 delay(50000);
 closegraph();
 return 0;
+	
 }
