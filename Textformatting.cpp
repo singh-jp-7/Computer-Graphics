@@ -3,10 +3,10 @@
 void main() 
 {
 	
-	int gd=DETECT,gm;
+	int gdriver=DETECT,gmode;
 
 	
-	initgraph(&gd,&gm,NULL);
+	initgraph(&gdriver,&gmode,NULL);
 
 	int x = 75, y = 75, f = 0;
 
