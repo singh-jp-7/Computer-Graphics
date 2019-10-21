@@ -9,7 +9,6 @@ int main()
     {
     putpixel(100,100+(i*3),500+(i*5));
     }
-    
     delay(5000);
     closegraph();
     return 0;
