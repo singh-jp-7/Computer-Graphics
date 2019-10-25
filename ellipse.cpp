@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
 #include<graphics.h>
 using namespace std; 
-
+//function for ellipse
 void midpointellipse(int rx, int ry, 
 				int xc, int yc) 
 { 
